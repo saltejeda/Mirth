@@ -1,0 +1,30 @@
+1. What is an ADT message?
+Admit Discharge and Transfer is a type of message used to transmit patient demographic information.
+2. What are HL7 Separator characters?
+Default delimiters include:
+"|" for fields
+"^" for components
+"&" for subcomponents
+"~" for repetitions
+3. What function would you use to update the date and time to current in MSH segment in Mirth?
+DateUtil.getCurrentDate(
+4. A sending application sends all ADT types. The client only accepts ADT-A01. How would you handle that in Mirth?
+Create a Source Transformer filtering on MSH.9.2 if the value is "A01".
+5. Where in Mirth would you write code that is used in multiple channels?
+Global Map
+6. Where would you set a certain type of data for a channel to receive and send out?
+Set Data Types on the Summary page
+7. How would you allow the code, written in question 5, to be used by a channel?
+channelGlobal.get
+8. Inbound and outbound message templates are used for what?
+Transform the inbound(msg) and outbound(tmp) messages
+9. How would you map a variable without the use of JavaScript?
+Drag and drop from the Message Tree
+10. Using JavaScript, loop through any 3 element array and log/write out the individual elements.
+var logString = '';
+for(var i=0; i<array.length();i++){
+logString += array[i].toString() + '\r\n';
+}
+11. What is the Velocity Template Language? Can you provide an example?
+The language in which the variables are referenced in the Source and Destinations
+${patDOB}
